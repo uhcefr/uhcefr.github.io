@@ -39,4 +39,3 @@ async function pageCommit() {
     var message = getValue(z, "message")
     document.getElementById("pageMessage").innerText += message;
 }
-//https://api.github.com/repos/uhcefr/uhcefr.github.io/commits
