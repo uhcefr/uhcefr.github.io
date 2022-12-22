@@ -1,4 +1,8 @@
 var pathname = window.location.pathname;
+if (pathname == "/") {
+    pathname += "index.html";
+}
+
 function githubHeader() {
     pageName();
     pageEdit();
