@@ -1,0 +1,17 @@
+.anchor {
+    padding: 10px;
+}
+
+.topnav {
+    position: fixed;
+    bottom: 100px;
+    right: 40px;
+    z-index: 100;
+}
+
+.botnav {
+    position: fixed;
+    bottom: 175px;
+    right: 40px;
+    z-index: 100;
+}

@@ -1,0 +1,68 @@
+.text-font,
+.text-link {
+    font-family: 'Garamond';
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+.text-link {
+    text-decoration: none;
+    color: white;
+}
+
+.text-inline,
+.text-inline-pad {
+    display: inline-block;
+}
+
+.text-padding-right,
+.text-inline-pad {
+    padding-right: 10px;
+}
+
+.text-padding-left,
+.text-inline-pad {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.text-font {
+    color: grey;
+}
+
+.text-small {
+    font-size: 22px;
+}
+
+.text-normal {
+    font-size: 26px;
+}
+
+.text-large {
+    font-size: 32px;
+}
+
+.text-extra {
+    font-size: 38px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-right {
+    float: right;
+}
+
+.text-left {
+    float: left;
+}
+
+.text-center {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.text-splitter {
+    color: red;
+}
