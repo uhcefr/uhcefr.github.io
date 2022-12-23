@@ -4,7 +4,9 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
-    overflow: overlay;
+    overflow: scroll;
+
+    margin: 0;
 }
 
 html {

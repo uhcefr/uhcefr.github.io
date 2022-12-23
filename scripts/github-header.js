@@ -1,19 +1,56 @@
-var pathname = window.location.pathname;
-if (pathname == "/") {
-    pathname += "index.html";
+githubHeader();
+
+function gather(url) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    resolve(data);
+                    return;
+                })
+                .catch(error => console.error(error))
+        }, 1000);
+    });
+}
+
+function getValues(obj, key) {
+    var objects = [];
+    for (var i in obj) {
+        if (!obj.hasOwnProperty(i)) continue;
+        if (typeof obj[i] == 'object') {
+            objects = objects.concat(getValues(obj[i], key));
+        } else if (i == key) {
+            objects.push(obj[i]);
+        }
+    }
+    return objects;
+}
+
+function getValue(obj, key) {
+    var value;
+    for (var i in obj) {
+        if (!obj.hasOwnProperty(i)) continue;
+        if (i == key) {
+            value = obj[i];
+            break;
+        }
+    }
+    return value;
 }
 
 function githubHeader() {
     pageName();
-    pageEdit();
     pageCommit();
 }
 function pageName() {
+    var pathname = window.location.pathname;
+    if (pathname == "/") {
+        pathname += "index.html";
+    }
+
     document.getElementById("pageName").innerText += pathname;
     document.getElementById("pageName").href += pathname;
-}
-
-function pageEdit() {
     document.getElementById("pageEdit").href += pathname;
 }
 

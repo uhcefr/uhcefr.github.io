@@ -1,7 +1,8 @@
 #footer {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 1);
 
-    position: fixed;
+    display: inline-table;
+    position: sticky;
     bottom: 0;
     left: 0;
 
@@ -12,4 +13,7 @@
     border-top: 0.5vh;
     border-color: rgb(255, 0, 0, 0.2);
     border-style: solid;
+
+    margin-top: 2.5vh;
+    padding-bottom: 0.25%;
 }

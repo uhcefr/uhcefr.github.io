@@ -1,12 +1,13 @@
 #header {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 1);
 
-    position: fixed;
+    display: inline-table;
+    position: sticky;
     top: 0;
     left: 0;
 
     width: 100%;
-    height: fit-content;
+    height: max-content;
 
     border: 0;
     border-bottom: 0.5vh;
