@@ -49,6 +49,13 @@ function pageName() {
         pathname += "index.html";
     }
 
+    /*
+    If pages/ + pathname.html
+        exist, add it to header to edit purpose
+        if scripts/ + pathname.js 
+        same thing, add text to do it
+    */
+
     document.getElementById("pageName").innerText += pathname;
     document.getElementById("pageName").href += pathname;
     document.getElementById("pageEdit").href += pathname;

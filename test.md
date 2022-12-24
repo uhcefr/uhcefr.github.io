@@ -1,7 +1,5 @@
-<div class="card">
+<div class="card text-font">
 # test  
-   
-
-- test
-- test
+- MD did not apply  
+- Raw text
 </div>

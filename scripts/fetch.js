@@ -47,11 +47,14 @@ function custom_pages_include() {
         include("../pages/home.html", "content", true);
         include("../test.md", "content", true);
     }
-    if (pathname === "/404.html") {
-        include("../pages/404.html", "content", true);
-    }
 
-    if (pathname === "/pages/giscus.html") {
+    else if (pathname === "/pages/giscus.html") {
         include_script("../scripts/giscus.js", "content", true);
+    }
+        
+    else if (pathname === "/404.html") {
+        include("../pages/404.html", "content", true);
+    } else {
+        include("../pages/404.html", "content", true);
     }
 }
