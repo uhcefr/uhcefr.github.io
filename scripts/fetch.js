@@ -4,12 +4,12 @@ async function include_all() {
     await include("../views/include/anchor.html", "body", false);
     await include("../views/include/header.html", "body", false);
 
-    await include("../pages/test.html", "body");
+    await include("../pages/content.html", "body");
 
     await include("../views/include/footer.html", "body", false);
 
     include_script("../scripts/github-header.js", "body", false);
-    
+
     include_script("../scripts/giscus.js", "content", true);
 
     /*
