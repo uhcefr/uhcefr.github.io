@@ -10,18 +10,7 @@ async function include_all() {
 
     include_script("../scripts/github-header.js", "body", false);
 
-    include_script("../scripts/giscus.js", "content", true);
-
-    /*
-    Faire si lien = / (index)
-    Ajouter Test.html (rename home)
-
-    Si lien = /pages/giscus.html
-    Add Giscus HTML (separated as Gisucs script)
-    Add include_giscus_script();
-    */
-
-
+    custom_pages_include();
 }
 
 async function include(link, query, queryOrIndex) {
@@ -48,3 +37,18 @@ function include_script(url) {
 }
 
 include_all();
+
+function custom_pages_include() {
+    var pathname = window.location.pathname;
+    if (pathname == "/") {
+        pathname += "index.html";
+    }
+
+    if (pathname === "/index.html") {
+        include("../pages/home.html", "content", true);
+    }
+    
+    if (pathname === "/pages/giscus.html") {
+        include_script("../scripts/giscus.js", "content", true);
+    }
+}
