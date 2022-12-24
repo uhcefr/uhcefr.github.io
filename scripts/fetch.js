@@ -1,3 +1,4 @@
+include_all();
 async function include_all() {
     await include("../views/include/head.html", "head", false);
     await include("../views/include/style.html", "head", false);
@@ -36,8 +37,6 @@ function include_script(url) {
     document.head.appendChild(script);
 }
 
-include_all();
-
 function custom_pages_include() {
     var pathname = window.location.pathname;
     if (pathname == "/") {
@@ -47,7 +46,7 @@ function custom_pages_include() {
     if (pathname === "/index.html") {
         include("../pages/home.html", "content", true);
     }
-    
+
     if (pathname === "/pages/giscus.html") {
         include_script("../scripts/giscus.js", "content", true);
     }

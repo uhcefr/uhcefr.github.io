@@ -5,6 +5,11 @@
     margin-block-end: 0px;
 }
 
+.text-underline {
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.5);
+}
+
 .text-link {
     text-decoration: none;
     color: white;
