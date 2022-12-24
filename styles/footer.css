@@ -7,7 +7,8 @@
     left: 0;
 
     width: 100%;
-    height: fit-content;
+    height: min-content;
+    min-height: 7.5vh;
 
     border: 0;
     border-top: 0.5vh;
