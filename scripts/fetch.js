@@ -45,6 +45,10 @@ function custom_pages_include() {
 
     if (pathname === "/index.html") {
         include("../pages/home.html", "content", true);
+        include("../test.md", "content", true);
+    }
+    if (pathname === "/404.html") {
+        include("../pages/404.html", "content", true);
     }
 
     if (pathname === "/pages/giscus.html") {
