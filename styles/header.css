@@ -17,4 +17,6 @@
 
     margin-bottom: 2.5vh;
     padding-top: 0.25%;
+    
+    z-index: 1000;
 }
