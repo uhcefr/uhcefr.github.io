@@ -64,9 +64,12 @@ function pageName() {
 async function pageCommit() {
     var x = await gather('https://api.github.com/repos/uhcefr/uhcefr.github.io/commits');
     var y = getValue(x[0], "sha");
+    if (String(y).length >= 8) {
+        var y2 = String(y.substring(0, 12) + "...");
+    }
 
     document.getElementById("pageCommit").href += y;
-    document.getElementById("pageCommit").innerText += y;
+    document.getElementById("pageCommit").innerText += y2;
 
     var z = getValue(x[0], "commit")
     var z2 = getValue(z, "author");

@@ -37,24 +37,24 @@ function include_script(url) {
     document.head.appendChild(script);
 }
 
-function custom_pages_include() {
+async function custom_pages_include() {
     var pathname = window.location.pathname;
     if (pathname == "/") {
         pathname += "index.html";
     }
 
     if (pathname === "/index.html") {
-        include("../pages/home.html", "content", true);
+        await include("../pages/home.html", "content", true);
         include("../test.md", "content", true);
     }
 
     else if (pathname === "/pages/giscus.html") {
         include_script("../scripts/giscus.js", "content", true);
     }
-        
+
     else if (pathname === "/404.html") {
-        include("../pages/404.html", "content", true);
+        await include("../pages/404.html", "content", true);
     } else {
-        include("../pages/404.html", "content", true);
+        await include("../pages/404.html", "content", true);
     }
 }
