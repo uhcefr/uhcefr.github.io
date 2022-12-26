@@ -40,22 +40,16 @@ function getValue(obj, key) {
 }
 
 function githubHeader() {
-    pageName();
-    pageCommit();
-}
-function pageName() {
     var pathname = window.location.pathname;
     if (pathname == "/") {
         pathname += "index.html";
     }
 
-    /*
-    If pages/ + pathname.html
-        exist, add it to header to edit purpose
-        if scripts/ + pathname.js 
-        same thing, add text to do it
-    */
-
+    pageName(pathname);
+    pageCommit();
+    includePages(pathname);
+}
+function pageName(pathname) {
     document.getElementById("pageName").innerText += pathname;
     document.getElementById("pageName").href += pathname;
     document.getElementById("pageEdit").href += pathname;
@@ -85,4 +79,44 @@ async function pageCommit() {
 
     var message = getValue(z, "message")
     document.getElementById("pageMessage").innerText += message;
+}
+
+function includedPages(nom, lien) {
+    pageInclude.append(splitter());
+    pageInclude = document.getElementById("pageInclude");
+
+    var a = document.createElement('a');
+    a.className = "text-link text-inline";
+    a.textContent = nom;
+    a.href = "https://github.com/uhcefr/uhcefr.github.io/tree/main/" + lien + "/" + nom;
+    a.target = "_blank";
+
+    pageInclude.append(a);
+}
+
+function splitter() {
+    var p = document.createElement('p');
+    p.className = "text-font text-splitter text-inline-pad";
+    p.textContent = "|";
+
+    return p;
+}
+
+function includePages(pathname) {
+    if (pathname == "/index.html") {
+        includedPages("content.html", "pages");
+        includedPages("home.html", "pages");
+        includedPages("test.md", "");
+    }
+    else if (pathname == "/pages/giscus.html") {
+        includedPages("giscus.js", "scripts");
+    }
+    else {
+        includedPages("404.html", "pages");
+        includedPages("404.md", "");
+    }
+
+
+    includedPages("github-header.js", "scripts");
+    includedPages("fetch.js", "scripts");
 }

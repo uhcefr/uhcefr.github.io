@@ -9,9 +9,9 @@ async function include_all() {
 
     await include("../views/include/footer.html", "body", false);
 
-    include_script("../scripts/github-header.js", "body", false);
+    await include_script("../scripts/github-header.js", "body", false);
 
-    custom_pages_include();
+    await custom_pages_include();
 }
 
 async function include(link, query, queryOrIndex) {
@@ -31,7 +31,7 @@ async function include(link, query, queryOrIndex) {
         });
 }
 
-function include_script(url) {
+async function include_script(url) {
     var script = document.createElement("script");
     script.src = url;
     document.head.appendChild(script);
@@ -45,7 +45,7 @@ async function custom_pages_include() {
 
     if (pathname === "/index.html") {
         await include("../pages/home.html", "content", true);
-        include("../test.md", "content", true);
+        await include("../test.md", "content", true);
     }
 
     else if (pathname === "/pages/giscus.html") {

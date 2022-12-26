@@ -6,7 +6,7 @@
 }
 
 .text-underline {
-    text-decoration: underline;
+    text-decoration: underline !important;
     text-decoration-color: rgba(255, 255, 255, 0.5);
 }
 
