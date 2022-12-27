@@ -2,7 +2,7 @@ body {
     min-height: 100vh;
 
     background-color: black;
-    background-image: url('../images/background.gif');
+    background-image: url('/images/background.gif');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;

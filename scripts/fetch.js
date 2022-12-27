@@ -1,15 +1,15 @@
 include_all();
 async function include_all() {
-    await include("../views/include/head.html", "head", false);
-    await include("../views/include/style.html", "head", false);
-    await include("../views/include/anchor.html", "body", false);
-    await include("../views/include/header.html", "body", false);
+    await include("/views/include/head.html", "head", false);
+    await include("/views/include/style.html", "head", false);
+    await include("/views/include/anchor.html", "body", false);
+    await include("/views/include/header.html", "body", false);
 
-    await include("../pages/content.html", "body");
+    await include("/pages/content.html", "body");
 
-    await include("../views/include/footer.html", "body", false);
+    await include("/views/include/footer.html", "body", false);
 
-    await include_script("../scripts/github-header.js", "body", false);
+    await include_script("/scripts/github-header.js", "body", false);
 
     await custom_pages_include();
 }
@@ -44,22 +44,22 @@ async function custom_pages_include() {
     }
 
     if (pathname === "/index.html") {
-        await include("../pages/home.html", "content", true);
-        await include("../test.md", "content", true);
+        await include("/pages/home.html", "content", true);
+        await include("/test.md", "content", true);
     }
 
     else if (pathname === "/pages/giscus.html") {
-        include_script("../scripts/giscus.js", "content", true);
+        include_script("/scripts/giscus.js", "content", true);
     }
 
     else if (pathname === "/pages/badges.html") {
-        await include("../pages/badges-uhcefr.html", "content", true);
-        include_script("../scripts/github-badges.js", "content", true);
+        await include("/pages/badges-uhcefr.html", "content", true);
+        include_script("/scripts/github-badges.js", "content", true);
     }
 
     else if (pathname === "/404.html") {
-        await include("../pages/404.html", "content", true);
+        await include("/pages/404.html", "content", true);
     } else {
-        await include("../pages/404.html", "content", true);
+        await include("/pages/404.html", "content", true);
     }
 }
