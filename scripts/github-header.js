@@ -104,7 +104,6 @@ function splitter() {
 
 function includePages(pathname) {
     if (pathname == "/index.html") {
-        includedPages("content.html", "pages");
         includedPages("home.html", "pages");
         includedPages("test.md", "");
     }
@@ -116,7 +115,7 @@ function includePages(pathname) {
         includedPages("404.md", "");
     }
 
-
+    includedPages("content.html", "pages");
     includedPages("github-header.js", "scripts");
     includedPages("fetch.js", "scripts");
 }
