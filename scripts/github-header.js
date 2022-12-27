@@ -52,7 +52,6 @@ function githubHeader() {
 function pageName(pathname) {
     document.getElementById("pageName").innerText += pathname;
     document.getElementById("pageName").href += pathname;
-    document.getElementById("pageEdit").href += pathname;
 }
 
 async function pageCommit() {
