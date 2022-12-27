@@ -52,6 +52,11 @@ async function custom_pages_include() {
         include_script("../scripts/giscus.js", "content", true);
     }
 
+    else if (pathname === "/pages/badges.html") {
+        await include("../pages/badges-uhcefr.html", "content", true);
+        include_script("../scripts/github-badges.js", "content", true);
+    }
+
     else if (pathname === "/404.html") {
         await include("../pages/404.html", "content", true);
     } else {
