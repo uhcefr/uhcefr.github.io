@@ -107,9 +107,16 @@ function includePages(pathname) {
         includedPages("home.html", "pages");
         includedPages("test.md", "");
     }
+
     else if (pathname == "/pages/giscus.html") {
         includedPages("giscus.js", "scripts");
     }
+
+    else if (pathname == "/pages/badges.html") {
+        includedPages("github-badges.js", "scripts");
+        includedPages("badges-uhcefr.html", "pages");
+    }
+
     else {
         includedPages("404.html", "pages");
         includedPages("404.md", "");
