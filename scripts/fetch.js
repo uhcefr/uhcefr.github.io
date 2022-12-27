@@ -8,7 +8,6 @@ async function include_all() {
     await include_css("/styles/text.css");
     await include_css("/styles/utils.css");
     await include_css("/styles/scrollbar.css");
-    //useless due to include css//await include("/views/include/style.html", "head", false);
 
     await include_css("/styles/anchor.css");
     await include("/views/include/anchor.html", "body", false);
