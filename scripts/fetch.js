@@ -1,12 +1,25 @@
 include_all();
+
 async function include_all() {
     await include("/views/include/head.html", "head", false);
-    await include("/views/include/style.html", "head", false);
+
+    await include_css("/styles/card.css");
+    await include_css("/styles/body.css");
+    await include_css("/styles/text.css");
+    await include_css("/styles/utils.css");
+    await include_css("/styles/scrollbar.css");
+    //useless due to include css//await include("/views/include/style.html", "head", false);
+
+    await include_css("/styles/anchor.css");
     await include("/views/include/anchor.html", "body", false);
+
+    await include_css("/styles/header.css");
     await include("/views/include/header.html", "body", false);
 
+    await include_css("/styles/content.css");
     await include("/pages/content.html", "body");
 
+    await include_css("/styles/footer.css");
     await include("/views/include/footer.html", "body", false);
 
     await include_script("/scripts/github-header.js", "body", false);
@@ -35,6 +48,17 @@ async function include_script(url) {
     var script = document.createElement("script");
     script.src = url;
     document.head.appendChild(script);
+}
+
+async function include_css(url) {
+    var head = document.getElementsByTagName('HEAD')[0];
+
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = url;
+
+    head.appendChild(link);
 }
 
 async function custom_pages_include() {
