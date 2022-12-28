@@ -61,7 +61,7 @@ async function include_css(url) {
 }
 
 async function include_md(url, query) {
-    await include_script("/scripts/md-parser.js", content, true);
+    await include_script("/scripts/md-parser.js");
     let response = await fetch(url)
         .then(response => {
             return response.text()
