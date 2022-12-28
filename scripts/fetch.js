@@ -1,7 +1,7 @@
 include_all();
 
 async function include_all() {
-    await include("/views/include/head.html", "head", false);
+    await include("/pages/includes/head.html", "head", false);
 
     await include_css("/styles/card.css");
     await include_css("/styles/body.css");
@@ -10,16 +10,16 @@ async function include_all() {
     await include_css("/styles/scrollbar.css");
 
     await include_css("/styles/anchor.css");
-    await include("/views/include/anchor.html", "body", false);
+    await include("/pages/includes/anchor.html", "body", false);
 
     await include_css("/styles/header.css");
-    await include("/views/include/header.html", "body", false);
+    await include("/pages/includes/header.html", "body", false);
 
     await include_css("/styles/content.css");
     await include("/pages/content.html", "body");
 
     await include_css("/styles/footer.css");
-    await include("/views/include/footer.html", "body", false);
+    await include("/pages/includes/footer.html", "body", false);
 
     await include_script("/scripts/github-header.js", "body", false);
 
