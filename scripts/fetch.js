@@ -61,7 +61,6 @@ async function include_css(url) {
 }
 
 async function include_md(url, query) {
-    await include_script("/scripts/md-parser.js");
     let response = await fetch(url)
         .then(response => {
             return response.text()
@@ -82,17 +81,20 @@ async function custom_pages_include() {
     }
 
     if (pathname === "/index.html") {
+        await include_script("/scripts/md-parser.js", "content", true);
+        
         await include("/pages/home.html", "content", true);
+
         await include_md("/pages/home.md", "content");
     }
 
     else if (pathname === "/pages/giscus.html") {
-        include_script("/scripts/giscus.js", "content", true);
+        await include_script("/scripts/giscus.js", "content", true);
     }
 
     else if (pathname === "/pages/badges.html") {
         await include("/pages/badges-uhcefr.html", "content", true);
-        include_script("/scripts/github-badges.js", "content", true);
+        await include_script("/scripts/github-badges.js", "content", true);
     }
 
     else if (pathname === "/404.html") {
