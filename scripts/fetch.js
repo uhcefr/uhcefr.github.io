@@ -60,6 +60,21 @@ async function include_css(url) {
     head.appendChild(link);
 }
 
+async function include_md(url, query) {
+    await include_script("/scripts/md-parser.js", content, true);
+    let response = await fetch(url)
+        .then(response => {
+            return response.text()
+        })
+        .then(data => {
+            let MDText = parseMd(data);
+            document.getElementById(query).innerHTML += MDText;
+        })
+        .catch(error => {
+            console.log(error);
+        });
+}
+
 async function custom_pages_include() {
     var pathname = window.location.pathname;
     if (pathname == "/") {
@@ -68,7 +83,7 @@ async function custom_pages_include() {
 
     if (pathname === "/index.html") {
         await include("/pages/home.html", "content", true);
-        await include("/test.md", "content", true);
+        await include_md("/pages/home.md", "content");
     }
 
     else if (pathname === "/pages/giscus.html") {

@@ -104,8 +104,8 @@ function splitter() {
 function includePages(pathname) {
     if (pathname == "/index.html") {
         includedPages("home.html", "pages");
-        includedPages("test.md", "");
-    }
+        includedPages("home.md", "pages");
+    } 
 
     else if (pathname == "/pages/giscus.html") {
         includedPages("giscus.js", "scripts");
