@@ -20,7 +20,7 @@
     z-index: 1000;
 }
 
-@media only screen and (max-height: 1000px) {
+@media only screen and (max-height: 950px) {
     #header {
         position: relative !important;
     }
