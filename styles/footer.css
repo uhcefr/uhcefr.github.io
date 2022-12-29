@@ -16,6 +16,12 @@
     border-style: solid;
 
     margin-top: 2.5vh;
-    
+
     z-index: 1000;
+}
+
+@media only screen and (max-height: 1000px) {
+    #footer {
+        position: relative !important;
+    }
 }
