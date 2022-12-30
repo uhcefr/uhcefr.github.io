@@ -1,5 +1,5 @@
 function toggle_button_menu() {
-    toggle_button("menu-main-card", false);
+    toggle_button("menu-main-card", true);
 }
 
 function toggle_button(name, inline) {

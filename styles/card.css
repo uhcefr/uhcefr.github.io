@@ -60,24 +60,26 @@
 }
 
 .menu-top {
-    z-index: 1001;
-
-    animation: 1s ease-in-out 0s 1 slideInFromLeft;
+    z-index: 999;
 
     border-radius: 24px;
+
+    animation: 0.2s ease-in-out 0s normal animationMenu;
 }
 
-@keyframes slideInFromLeft {
+@keyframes animationMenu {
     0% {
-        transform: translateX(-100%);
-        opacity: 0;
+        transform: translateY(-100%);
+        opacity: 0.5;
         filter: blur(5px);
+        scale: 50%;
     }
 
     100% {
-        transform: translateX(0);
+        transform: translateY(0);
         opacity: 1;
         filter: blur(0px);
+        scale: 100%;
     }
 }
 
