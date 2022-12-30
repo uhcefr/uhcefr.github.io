@@ -18,6 +18,9 @@ async function include_all() {
     await include_css("/styles/content.css");
     await include("/pages/content.html", "body");
 
+    await include("/pages/includes/menu.html", "content", true);
+    await include_script("/scripts/menu.js", "body", false);
+
     await include_css("/styles/footer.css");
     await include("/pages/includes/footer.html", "body", false);
 
@@ -82,7 +85,7 @@ async function custom_pages_include() {
 
     if (pathname === "/index.html") {
         await include_script("/scripts/md-parser.js", "content", true);
-        
+
         await include("/pages/home.html", "content", true);
 
         await include_md("/pages/home.md", "content");

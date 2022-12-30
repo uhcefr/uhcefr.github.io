@@ -11,12 +11,12 @@
 
     vertical-align: top;
 
-    transition: 1.5s;
-
     margin: 1%;
 
+    transition: 1.5s;
     backdrop-filter: blur(2px);
     filter: blur(0px);
+    opacity: 1;
 
     display: inline-block;
 }
@@ -26,4 +26,61 @@
     opacity: 1;
     backdrop-filter: blur(10px);
     filter: blur(0px)
+}
+
+.card-menu {
+    border-radius: 24px;
+    border-style: solid;
+    border-width: 3px;
+
+    border-color: rgb(255, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.1);
+
+    width: fit-content;
+    height: fit-content;
+
+    vertical-align: top;
+
+    transition: 1.5s;
+
+    backdrop-filter: blur(2px);
+    filter: blur(0px);
+
+    display: inline-block;
+}
+
+.card-menu:hover {
+    transition: 1.5s;
+    opacity: 1;
+    backdrop-filter: blur(10px);
+    filter: blur(0px);
+    border-color: rgb(255, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+}
+
+.menu-top {
+    z-index: 1001;
+
+    animation: 1s ease-in-out 0s 1 slideInFromLeft;
+
+    border-radius: 24px;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+        filter: blur(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+.top-align {
+    vertical-align: top;
 }
