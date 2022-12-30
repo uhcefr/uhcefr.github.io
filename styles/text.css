@@ -39,6 +39,10 @@ a {
     padding-left: 10px;
 }
 
+.text-pad-top {
+    padding-top: 10px;
+}
+
 .text-pad-bot {
     padding-bottom: 10px;
 }
