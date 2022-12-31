@@ -104,16 +104,16 @@ function splitter() {
 function includePages(pathname) {
     if (pathname == "/index.html") {
         includedPages("home.html", "pages");
-        
+
         includedPages("home.md", "pages");
         includedPages("md-parser.js", "scripts");
     }
 
-    else if (pathname == "/pages/giscus.html") {
+    else if (pathname == "/pages/views/giscus.html") {
         includedPages("giscus.js", "scripts");
     }
 
-    else if (pathname == "/pages/badges.html") {
+    else if (pathname == "/pages/views/badges.html") {
         includedPages("github-badges.js", "scripts");
         includedPages("badges-uhcefr.html", "pages");
     }

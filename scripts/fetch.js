@@ -16,7 +16,7 @@ async function include_all() {
     await include("/pages/includes/header.html", "body", false);
 
     await include_css("/styles/content.css");
-    await include("/pages/content.html", "body");
+    await include("/pages/includes/content.html", "body");
 
     await include("/pages/includes/menu.html", "content", true);
     await include_script("/scripts/menu.js", "body", false);
@@ -86,23 +86,23 @@ async function custom_pages_include() {
     if (pathname === "/index.html") {
         await include_script("/scripts/md-parser.js", "content", true);
 
-        await include("/pages/home.html", "content", true);
+        await include("/pages/contents/home.html", "content", true);
 
-        await include_md("/pages/home.md", "content");
+        await include_md("/pages/contents/home.md", "content");
     }
 
-    else if (pathname === "/pages/giscus.html") {
+    else if (pathname === "/pages/views/giscus.html") {
         await include_script("/scripts/giscus.js", "content", true);
     }
 
-    else if (pathname === "/pages/badges.html") {
-        await include("/pages/badges-uhcefr.html", "content", true);
+    else if (pathname === "/pages/views/badges.html") {
+        await include("/pages/contents/badges-uhcefr.html", "content", true);
         await include_script("/scripts/github-badges.js", "content", true);
     }
 
     else if (pathname === "/404.html") {
-        await include("/pages/404.html", "content", true);
+        await include("/pages/contents/404.html", "content", true);
     } else {
-        await include("/pages/404.html", "content", true);
+        await include("/pages/contents/404.html", "content", true);
     }
 }

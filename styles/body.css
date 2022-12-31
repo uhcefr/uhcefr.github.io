@@ -1,7 +1,7 @@
 body {
     min-height: 100vh;
 
-    background-color: black;
+    background-color: rgb(30, 30, 30);
     background-image: url('/images/background.gif');
     background-repeat: no-repeat;
     background-attachment: fixed;

@@ -23,6 +23,10 @@ a {
     color: white;
 }
 
+.text-margin {
+    margin: 3px;
+}
+
 .text-inline,
 .text-inline-pad {
     display: inline-block;
