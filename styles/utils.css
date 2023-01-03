@@ -9,21 +9,3 @@
 .padding-top {
     padding-top: 1vh;
 }
-
-.line,
-.lineVert {
-    display: inline-block;
-    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(255, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
-    border-radius: 100px;
-    margin: 10px;
-}
-
-.lineVert {
-    height: 15rem;
-    width: 3px;
-}
-
-.line {
-    height: 5px;
-    width: 10rem;
-}
