@@ -103,9 +103,8 @@ function splitter() {
 
 function includePages(pathname) {
     if (pathname == "/index.html") {
-        includedPages("home.html", "pages");
-
-        includedPages("home.md", "pages");
+        includedPages("home.html", "pages/contents");
+        includedPages("home.md", "pages/contents");
         includedPages("md-parser.js", "scripts");
     }
 
@@ -115,16 +114,17 @@ function includePages(pathname) {
 
     else if (pathname == "/pages/views/badges.html") {
         includedPages("github-badges.js", "scripts");
-        includedPages("badges-uhcefr.html", "pages");
+        includedPages("badges-uhcefr.html", "pages/contents");
     }
 
     else {
-        includedPages("404.html", "pages");
+        includedPages("404.html", "pages/contents");
         includedPages("404.md", "");
     }
 
-    includedPages("content.html", "pages");
+    includedPages("content.html", "pages/includes");
     includedPages("github-header.js", "scripts");
     includedPages("menu.js", "scripts");
+    includedPages("menu.html", "pages/includes");
     includedPages("fetch.js", "scripts");
 } 
