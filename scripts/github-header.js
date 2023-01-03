@@ -125,5 +125,6 @@ function includePages(pathname) {
 
     includedPages("content.html", "pages");
     includedPages("github-header.js", "scripts");
+    includedPages("menu.js", "scripts");
     includedPages("fetch.js", "scripts");
-}
+} 
