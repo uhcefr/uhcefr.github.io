@@ -92,3 +92,17 @@ a {
 .text-splitter {
     color: red;
 }
+
+@media only screen and (max-width: 750px) {
+    .text-splitter {
+        padding: 5px;
+        opacity: 0.5;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .text-splitter {
+        padding: 2px;
+        opacity: 0;
+    }
+}
