@@ -1,4 +1,4 @@
-//set_all_text();
+set_all_text();
 
 window.addEventListener("resize", set_all_text);
 
