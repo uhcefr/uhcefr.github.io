@@ -3,7 +3,6 @@
     border-style: solid;
     border-width: 3px;
 
-    border-color: rgb(255, 0, 0, 0.4);
     background-color: rgb(0, 0, 0, 0.5);
 
     width: fit-content;
@@ -19,13 +18,19 @@
     opacity: 1;
 
     display: inline-block;
+
+    border-color: rgb(255, 0, 0, 0.4);
+    box-shadow: 0px 0px 20px 10px rgb(255 0 0 / 50%), inset 0px 0px 20px 3px rgb(255 0 0 / 50%);
 }
 
 .card:hover {
     transition: 1.5s;
     opacity: 1;
     backdrop-filter: blur(10px);
-    filter: blur(0px)
+    filter: blur(0px);
+
+    border-color: rgb(85, 0, 0, 0.4);
+    box-shadow: 0px 0px 20px 5px rgba(85, 0, 0, 0.5), inset 0px 0px 20px 1px rgb(85, 0, 0, 0.5);
 }
 
 .card-menu {
