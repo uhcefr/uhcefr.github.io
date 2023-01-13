@@ -28,7 +28,9 @@
     opacity: 1;
     backdrop-filter: blur(10px);
     filter: blur(0px);
+}
 
+.card:hover, .card-red-effect {
     border-color: rgb(255, 0, 0, 0.4);
     box-shadow: 0px 0px 20px 10px rgb(255 0 0 / 50%), inset 0px 0px 20px 3px rgb(255 0 0 / 50%);
 }
