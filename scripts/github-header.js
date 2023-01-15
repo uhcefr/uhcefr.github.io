@@ -104,8 +104,9 @@ function splitter() {
 function includePages(pathname) {
     if (pathname == "/index.html") {
         includedPages("home.html", "pages/contents");
-        includedPages("home.md", "pages/contents");
-        includedPages("md-parser.js", "scripts");
+        // includedPages("home.md", "pages/contents");
+        // includedPages("md-parser.js", "scripts");
+        //Ont étés déplacés vers opensource/contribuer
     }
 
     else if (pathname == "/pages/views/giscus.html") {
