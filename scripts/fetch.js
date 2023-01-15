@@ -84,11 +84,7 @@ async function custom_pages_include() {
     }
 
     if (pathname === "/index.html") {
-        await include_script("/scripts/md-parser.js", "content", true);
-
         await include("/pages/contents/home.html", "content", true);
-
-        await include_md("/pages/contents/home.md", "content");
     }
 
     else if (pathname === "/pages/views/giscus.html") {
@@ -97,7 +93,17 @@ async function custom_pages_include() {
 
     else if (pathname === "/pages/views/badges.html") {
         await include("/pages/contents/badges-uhcefr.html", "content", true);
-        await include_script("/scripts/github-badges.js", "content", true);
+        //await include_script("/scripts/github-badges.js", "content", true);
+    }
+
+    else if (pathname.startsWith("/pages/views/opensource")) {
+        var pathnameInclude = pathname.replace("views", "contents");
+        await include(pathnameInclude, "content", true);
+
+        if (pathname === "/pages/views/opensource/contribuer.html") {
+            await include_script("/scripts/md-parser.js", "content", true);
+            await include_md("/pages/contents/home.md", "content");
+        }
     }
 
     else if (pathname === "/404.html") {

@@ -117,6 +117,10 @@ function includePages(pathname) {
         includedPages("badges-uhcefr.html", "pages/contents");
     }
 
+    else if (pathname.startsWith("/pages/views/opensource")) {
+    
+    }
+
     else {
         includedPages("404.html", "pages/contents");
         includedPages("404.md", "");

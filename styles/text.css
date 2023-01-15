@@ -2,6 +2,11 @@ a {
     color: whitesmoke;
 }
 
+p {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
 .text-font,
 .text-link {
     font-family: 'Garamond';
