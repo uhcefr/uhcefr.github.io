@@ -118,7 +118,8 @@ function includePages(pathname) {
     }
 
     else if (pathname.startsWith("/pages/views/opensource")) {
-    
+        var pathnameInclude2 = pathname.split("/")
+        includedPages(pathnameInclude2[pathnameInclude2.length - 1], "pages/contents/opensource");
     }
 
     else {
