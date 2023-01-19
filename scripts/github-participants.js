@@ -1,6 +1,10 @@
 var data = [];
 var final = [];
-display();
+start();
+
+async function start() {
+    display(await calcul("uhcefr"));
+}
 
 async function getuserData(repo, orgs) {
     var x = await gather('https://api.github.com/repos/' + orgs + '/' + repo + '/contributors');
@@ -42,7 +46,7 @@ async function calcul(orgs) {
             if (login == login2) {
                 found = true;
                 var contributions = getValue(data[i], "contributions");
-                var contributions2 = getValue(final[i2], "contributions")
+                var contributions2 = getValue(final[i2], "contributions");
                 var total = contributions + contributions2;
                 final[i2]["contributions"] = total;
             }
@@ -52,9 +56,36 @@ async function calcul(orgs) {
             final.push(data[i]);
         }
     }
+
+    return final;
 }
 
-async function display() {
-    await calcul("uhcefr");
-    console.log(final);
+function display(array) {
+    var root = document.getElementById("participants_github");
+    for (var i in array) {
+        var login = getValue(array[i], "login");
+        var id = getValue(array[i], "id");
+        var html_url = getValue(array[i], "html_url");
+        var contributions = getValue(array[i], "contributions");
+        var avatar_url = getValue(array[i], "avatar_url");
+
+        var div = document.createElement('div');
+
+        var img = document.createElement('img');
+        img.src = avatar_url;
+        img.style = "max-width: 100px;max-height:100px;border-radius:25px;";
+
+        var a = document.createElement('a');
+        a.textContent = login;
+        a.href = html_url;
+
+        var p = document.createElement('p');
+        p.textContent = "Contributions : " + contributions;
+
+        div.append(img);
+        div.append(a);
+        div.append(p);
+        root.append(div);
+    }
+
 }
