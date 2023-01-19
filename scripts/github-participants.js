@@ -90,6 +90,8 @@ function display(array) {
         div.append(a);
         div.append(p);
         root.append(div);
+
+        document.getElementById("loading").style = "display:none;";
     }
 
 }
