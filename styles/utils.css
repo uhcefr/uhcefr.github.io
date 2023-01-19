@@ -9,3 +9,29 @@
 .padding-top {
     padding-top: 1vh;
 }
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+        color: rgba(128, 128, 128, 0.80);
+        font-size: 50px;
+    }
+
+    50% {
+        transform: translatey(-20px);
+        color: rgba(128, 128, 128, 0.50);
+        font-size: 40px;
+    }
+
+    100% {
+        transform: translatey(0px);
+        color: rgba(128, 128, 128, 0.70);
+        font-size: 50px;
+    }
+}
+
+#loading {
+    animation: float 3s ease-in-out infinite;
+    text-align: center;
+    font-weight: bold;
+}
