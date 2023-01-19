@@ -93,5 +93,4 @@ function display(array) {
 
         document.getElementById("loading").style = "display:none;";
     }
-
 }
