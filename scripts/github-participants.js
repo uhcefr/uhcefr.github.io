@@ -69,7 +69,10 @@ function display(array) {
         var contributions = getValue(array[i], "contributions");
         var avatar_url = getValue(array[i], "avatar_url");
 
+        var br = document.createElement('br');
+
         var div = document.createElement('div');
+        div.style = "display: inline-block;margin:20px;"
 
         var img = document.createElement('img');
         img.src = avatar_url;
@@ -83,6 +86,7 @@ function display(array) {
         p.textContent = "Contributions : " + contributions;
 
         div.append(img);
+        div.append(br);
         div.append(a);
         div.append(p);
         root.append(div);
