@@ -7,5 +7,6 @@
 - Stocker les cours via un .md  
 - Stocker les scripts à link via .md  
 - rewrite l'include de gist hors .md  
+- script fetchMd démarre pas assez vite ou bien ! (1/2 = OK)
 
 </div>
