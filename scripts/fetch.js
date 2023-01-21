@@ -104,8 +104,7 @@ async function custom_pages_include() {
             await include_script("/scripts/md-parser.js", "content", true);
             await include_md("/pages/contents/home.md", "content");
         }
-
-        if (pathname === "/pages/views/opensource/participants.html") {
+        else if (pathname === "/pages/views/opensource/participants.html") {
             await include_script("/scripts/github-participants.js", "content", true);
         }
     }
