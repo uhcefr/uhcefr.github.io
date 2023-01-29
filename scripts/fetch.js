@@ -92,7 +92,7 @@ async function custom_pages_include() {
     }
 
     else if (pathname === "/pages/views/badges.html") {
-        await include("/pages/contents/badges-uhcefr.html", "content", true);
+        //await include("/pages/contents/badges-uhcefr.html", "content", true);
         //await include_script("/scripts/github-badges.js", "content", true);
     }
 
